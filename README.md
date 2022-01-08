@@ -1,4 +1,4 @@
-# Dotnet Identity Tutorial
+# ASP.NET Core Identity Tutorial
 The purpose of this tutorial is to give you a brief introduction to the Microsoft Identity framework, and step by step approach to configure it. Before beginning, you require to be familiar with basic terminologies.
 1. Principal
 2. Identities
