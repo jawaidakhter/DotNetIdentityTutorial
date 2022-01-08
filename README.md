@@ -134,3 +134,5 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 ```
+
+Sample code is available at Master Branch.
