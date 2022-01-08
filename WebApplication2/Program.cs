@@ -25,7 +25,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-// Add Authentication middleware 
+// Add Authentication middleware
 app.UseAuthentication();
 app.UseAuthorization();
 
