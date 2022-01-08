@@ -110,3 +110,27 @@ namespace WebApplication2.Pages.Account
 
 
 ```
+
+
+### Authentication Service Configuration
+The second step is to configure authentication. There are various ways to configure authentication. You can use Cookies or  JWT. In this tutorial, I am configuring authentication based on Cookies.
+To configure authentication you have to authentication services.
+```csharp
+// Default scheme, Authentication scheme and cookie name must be same as identities name
+// used in Login.cshtml.cs,  
+builder.Services.AddAuthentication("MyCookieAuth")
+	.AddCookie("MyCookieAuth", options =>
+	{
+		options.Cookie.Name = "MyCookieAuth";
+
+	});
+builder.Services.AddRazorPages();
+```
+
+In configuration the second step is to use authentication in middleware.
+```csharp
+app.UseRouting();
+// Add Authentication middleware 
+app.UseAuthentication();
+app.UseAuthorization();
+```
